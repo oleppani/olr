@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
+import Left from './components/Left'
+import Right from './components/Right'
+import Footer from './components/Footer'
 import React, { useState, useEffect, Suspense} from 'react'
 import {
   BrowserRouter as Router,
@@ -28,6 +31,9 @@ function App() {
       <Router>
         <AppBar position="static">
             <Header />
+            <Left />
+            <Right />
+            <Footer />
             <div align='bottom' position='fixed' style={{right:'0px', height:'10px', backgroundColor: "#C4DFE6", color:"#C4DFE6"}}></div>
         </AppBar>
         <br />
@@ -53,7 +59,6 @@ function App() {
     </div>
     </Suspense>
       <header className="App-header">
-      <br /><br /><br /><br /><br /><br />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
