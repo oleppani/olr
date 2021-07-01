@@ -4,12 +4,27 @@ import Header from './components/Header'
 import Left from './components/Left'
 import Right from './components/Right'
 import Footer from './components/Footer'
+import Home from './components/Home'
+import S1 from './components/S1'
+import S2 from './components/S2'
+import S3 from './components/S3'
+import S4 from './components/S4'
+import S5 from './components/S5'
+import S6 from './components/S6'
+import S7 from './components/S7'
+import S8 from './components/S8'
+import S9 from './components/S9'
+import S10 from './components/S10'
+import S11 from './components/S11'
+import S12 from './components/S12'
+import PokemonTable from './components/PokemonTable'
 import React, { useState, useEffect, Suspense} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
+  Link
 } from "react-router-dom"
 import {
   Container,
@@ -39,18 +54,53 @@ function App() {
         <br />
         <Switch>
           <Route path="/home">
-            </Route>
-          <Route path="/login">
+            <Home />
           </Route>
-          <Route path="/login/:id">
-           
+          <Route path="/jfr">
+            <S2 />
           </Route>
-          <Route path="/logout">
-        
+          <Route path="/wtr">
+            <S1 />
+          </Route>
+          <Route path="/fpwj">
+            <S3/>
+          </Route>
+          <Route path="/hrw">
+            <S4/>
+          </Route>
+          <Route path="/rwj">
+            <S5/>
+          </Route>
+          <Route path="/rsm">
+            <S6/>
+          </Route>
+          <Route path="/ecwh">
+            <S7/>
+          </Route>
+          <Route path="/id">
+            <S8/>
+          </Route>
+          <Route path="/sus">
+            <S9 />
+          </Route>
+          <Route path="/rt">
+            <S10/>
+          </Route>
+          <Route path="/rr">
+            <S11/>
+          </Route>
+          <Route path="/rats">
+            <S12/>
+          </Route>
+          <Route path="/pt">
+            <PokemonTable/>
           </Route>
           <Route path="/">
-            
+            <Home/>
           </Route>
+          
+          
+          
         </Switch>
         <br /><br /><br /><br />
         
@@ -58,32 +108,7 @@ function App() {
     </Container>
     </div>
     </Suspense>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-          Osmo Learning React:
-          <ul>
-            <li>
-            First you need to install Nodejs, Reactjs, Git, VS Code
-            </li>
-            <li>
-            Registrate in GitHub, Heroku (and mongodb.com if you need DB)
-          
-            </li>
-            <li>
-            Create React App in Command prompt with "npx create-react-app AppName"
-         
-            </li>
-            <li>
-            You can edit your App details with command "npm init"
-         
-            </li>
-            <li>
-            Git is used with commands: "git init" (first time initialization), "git remote add name git@github.com:oleppani/daas.git" (connect to GitHub repository in first time of use) "git add ." (adding all changes), "git commit -m'details'" (describe what have been done), "git push repository master" (push changes in GitHub or Heroku)
-            </li>
-
-          </ul>
-      </header>
+      
     </div>
   );
 }
