@@ -10,17 +10,7 @@ const S5 = () => {
     font: 'Verdana'
   }}><br />
     <h2>React with JSX</h2> 
-    <p>		1. React Elements as JSX
-			1. JSX Tips
-			2. Mapping Arrays with JSX
-		2. Babel
-		3. Recipes as JSX
-		4. React Fragments
-		5. Intro to webpack
-			1. Creating the Project
-			2. Loading the Bundle
-			3. Source Mapping
-			4. Create React App
+    <p>	
       <h3>JSX</h3>
     JSX is combination of JavaScript and XML. Curly braces are used to set values from variables or functions.
     <br />

@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -29,11 +30,17 @@ const PokemonTable = () => {
 
       
     return(
-    ReactDOM.render(
+      ReactDOM.render(
+        React.createElement(PokeTable, null, null),
+          document.getElementById("root")
+        )
+    )
+/***
+ * ReactDOM.render(
       React.createElement(PokeTable, null, null),
         document.getElementById("root")
       )
     )
-
+ */
 }
 export default PokemonTable

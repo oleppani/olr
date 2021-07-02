@@ -18,7 +18,7 @@ const S12 = () => {
 		4. Gatsby
 		5. React in the Future
 
-    <h3></h3>
+    
     
     <ul>
       <li></li>
@@ -26,30 +26,30 @@ const S12 = () => {
       <li></li>
 
       </ul>
-      <h3></h3>
+      
       <ul>
         <li></li>
         <li></li>
       </ul>
-      <h3></h3>
+      
       <ul><li></li></ul>
 
-      <h3></h3>
+      
       <ul><li></li></ul>
      
 
-      <h3></h3>
+      
       <ul><li></li></ul>
       
 
-      <h3></h3>
+      
       <ul><li></li></ul>
       
-      <h3></h3>
+      
       <ul><li></li></ul>
       
 
-      <h3></h3>
+      
       <ul><li></li></ul>
       
 </p> 

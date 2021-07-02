@@ -1,10 +1,11 @@
 import React from 'react'
-import {
+/*import {
   Button
 } from '@material-ui/core'
 import {
   Link
 } from "react-router-dom"
+*/
 const Footer = () => {
   // eslint-disable-next-line
   const footerStyle = {
@@ -23,7 +24,21 @@ const Footer = () => {
     <div style={footerStyle}>
     <table bgcolor='#000000' width='100%'>
       <tbody>
-      <tr><td width='20%'><Button style={{backgroundColor: "#07575B", color:"#C4DFE6",fontSize: "14px" }} size='small' color="primary" component={Link} to="/rwj"> 
+      <tr><td width='20%'></td>
+          <td width='20%'></td>
+          <td width='30%'></td>
+          <td width='30%'> <font size='2' >
+         &copy; Osmo Leppäniemi
+         </font>
+         </td></tr>
+          </tbody>
+    </table>
+    </div>
+  )
+}
+/**
+ * 
+ * <tr><td width='20%'><Button style={{backgroundColor: "#07575B", color:"#C4DFE6",fontSize: "14px" }} size='small' color="primary" component={Link} to="/rwj"> 
       React with JSX
           </Button></td>
           <td width='20%'><Button style={{backgroundColor: "#07575B", color:"#C4DFE6",fontSize: "14px" }} size='small' color="primary" component={Link} to="/rsm">
@@ -39,10 +54,5 @@ const Footer = () => {
          &copy; Osmo Leppäniemi
          </font>
          </td></tr>
-          </tbody>
-    </table>
-    </div>
-  )
-}
-
+ */
 export default Footer

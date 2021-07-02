@@ -8,9 +8,14 @@ const Home = () => {
   return(
     <header className="App-header">
     <img src={logo} className="App-logo" alt="logo" />
+
+    <b>Source codes for this "Osmo Learning React" App are stored in <a href="https://github.com/oleppani/olr" target='0'>https://github.com/oleppani/olr</a></b>
+    <br />
+    <br />
     <h2>React</h2>
     <p>React is created by Jordan Walke in 2011 for Facebook's newsfeed requirements. React is an open source framework.</p>
 
+    
       Osmo Learning React:
       <ul>
         <li>
@@ -36,8 +41,7 @@ const Home = () => {
       </ul>
 
       <br /><br />
-      <b>Source codes for this "Osmo Learning React" are stored in <a href="https://github.com/oleppani/olr" target='0'>https://github.com/oleppani/olr</a></b>
-  </header>
+        </header>
 )
 }
 export default Home

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import {
   Link
 } from "react-router-dom"
@@ -15,14 +15,6 @@ const S4 = () => {
   }}><br />
     <h2>How React works</h2> 
     <p>
-		1. Page Setup
-		2. React Elements
-		3. ReactDOM
-			1. Children
-		4. React Components
-			1. React Components: A Historical Tour
-
-      <h3></h3>
     <b>React and ReactDom are libraries that are used to render views on browser. The Document Object Model (DOM) is manipulated to get wanted views and actions. React enables Single-Page-Apps (SPA) that includes all the views in one App and views changing depending on user choices. </b>
     <br /><br />
     With code from module PokemonTable.js below, we can create table of Pokemons by modifying DOM. See results from here <Button style={{backgroundColor: "#07575B", color:"#C4DFE6",fontSize: "14px" }} size='small' color="primary" component={Link} to="/pt">

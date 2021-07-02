@@ -1,7 +1,7 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
+ // Typography,
   makeStyles,
   IconButton,
   Drawer,
@@ -11,17 +11,18 @@ import {
 import logoa from '../pics/index.png';
 import MenuIcon from "@material-ui/icons/Menu"
 import HomeIcon from '@material-ui/icons/Home'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+/*/import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import AccountTreeIcon from '@material-ui/icons/AccountTree'
 import InsertCommentIcon from '@material-ui/icons/InsertComment'
 import PeopleIcon from '@material-ui/icons/People'
 import WorkIcon from '@material-ui/icons/Work'
 import FeedbackIcon from '@material-ui/icons/Feedback'
 import ContactMailIcon from '@material-ui/icons/ContactMail'
-import ExitToAppIcon from '@material-ui/icons/ExitToApp'
+*/
+//import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import React, { useState, useEffect } from "react"
 import { Link as RouterLink } from "react-router-dom"
-import ico from "../pics/icon.png"
+//import ico from "../pics/icon.png"
 
 
 const useStyles = makeStyles(() => ({
@@ -41,9 +42,10 @@ const useStyles = makeStyles(() => ({
   },
   menuButton: {
     fontFamily: "Open Sans, sans-serif",
-    fontWeight: 700,
-    size: "15px",
+    fontWeight: 200,
+    size: "6px",
     marginLeft: "2px",
+    backgroundColor: "#333333",
     color:"#C4DFE6",
   },
   toolbar: {
@@ -66,12 +68,67 @@ export default function Header() {
 
   const { mobileView, drawerOpen } = state;
   const headersData = [
+    
     {
       label: '',
       href: "/",
       icon: <HomeIcon />
     },
-
+    {
+      label: 'JavaScript for React',
+      href: "/jfr",
+      icon: ''
+    },
+    {
+      label: 'Functional programming with JavaScript',
+      href: "/fpwj",
+      icon: ''
+    },
+    {
+      label: 'How React works',
+      href: "/hrw",
+      icon: ''
+    },
+    {
+      label: 'React wit JSX',
+      href: "/rwj",
+      icon: ''
+    },
+    {
+      label: 'React state management',
+      href: "/rsm",
+      icon: ''
+    },
+    {
+      label: 'Enhancing components with hooks',
+      href: "/ecwh",
+      icon: ''
+    },
+    {
+      label: 'Incorporating data',
+      href: "/id",
+      icon: ''
+    },
+    {
+      label: 'Suspense',
+      href: "/sus",
+      icon: ''
+    },
+    {
+      label: 'React testing',
+      href: "/rt",
+      icon: ''
+    },
+    {
+      label: 'React router',
+      href: "/rr",
+      icon: ''
+    },
+    {
+      label: 'React and the server',
+      href: "/rats",
+      icon: ''
+    }
     /*{
       label: '',
       href: "/logout",
@@ -95,8 +152,8 @@ export default function Header() {
     return (
       <Toolbar className={toolbar}>
           <div style={{position: 'absolute', left: '1%', top: '10px'}  }>{Logo}</div>
-          <div style={{position: 'absolute', left: '4%', top: '18px',color: '#D1DBE2', fontSize: '20px', fontFamily:'Arial black' }  }>Osmo Learning React</div>
-        <div align='right' style={{position: 'absolute', right: '10px',}  }>{getMenuButtons()}</div>
+          <div style={{position: 'absolute', left: '6%', top: '35px',color: '#D1DBE2', fontSize: '20px', fontFamily:'Arial black' }  }>Osmo Learning React</div>
+        <div align='right' style={{position: 'absolute', right: '10px',top: '3px'}  }>{getMenuButtons()}</div>
       </Toolbar>
     );
   };
@@ -137,23 +194,22 @@ export default function Header() {
         <IconButton
           {...{
             color: "inherit",
-            to: '/logout',
+            to: '/',
             component: RouterLink,
             className: menuButton,
             size: "small"
           }}
         >
-          <ExitToAppIcon />
+          <HomeIcon />
         </IconButton></div>
       </Toolbar>
     );
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href, icon }) => {
+    return headersData.map(({ label, href }) => {
       return (
-        <Link
-          {...{
+        <Link key='1' {...{
             component: RouterLink,
             to: href,
             color: "inherit",
@@ -176,7 +232,7 @@ export default function Header() {
   const getMenuButtons = () => {
     return headersData.map(({ label, href, icon }) => {
       return (
-        <IconButton
+        <IconButton key='2'
           {...{
             key: label,
             color: "inherit",

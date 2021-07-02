@@ -1,58 +1,44 @@
-import React from 'react'
-//import {useTranslation} from "react-i18next"
+
+import React, { Suspense} from 'react'
 
 
 const S9 = () => {
   // eslint-disable-next-line
   //const [t, i18n] = useTranslation('common')
   return(
-  <div style={{ 
-    font: 'Verdana'
-  }}><br />
+  <div style={{ font: 'Verdana' }}>
+    <Suspense fallback="loading">
+        <br />
     <h2>Suspense</h2> 
-    <p>		1. Error Boundaries
-		2. Code Splitting
-			1. Introducing: The Suspense Component
-			2. Using Suspense with Data
-			3. Throwing Promises
-			4. Building Suspenseful Data Sources
-			5. Fiber
+<br /> Suspense is React's feature to describe if actions (data loading for example) is ready or still in progress.
+<br />
 
-      <h3></h3>
+<br />
+Suspense can be imported from "react" library (import React, &#10100; Suspense &#10101; from 'react')
+<br />
+Using Suspense is optional but keeps user better informed of actions' phase.
+<br />
+<br />
+<div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
+In this App Suspense is used in App.js like this:
+<br />
+return (
+  &lt;div className="App"&#62;
+  &lt;Suspense fallback="loading"&#62;
+        ...
     
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+        &lt;Container&#62;
+        &lt;Router&#62;
+        ...
+        &lt;Switch&#62;
+        &lt;Route path="/home"&#62;
+        ...
+        &lt;/Suspense&#62;
 
-      </ul>
-      <h3></h3>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-      <h3></h3>
-      <ul><li></li></ul>
-
-      <h3></h3>
-      <ul><li></li></ul>
-     
-
-      <h3></h3>
-      <ul><li></li></ul>
-      
-
-      <h3></h3>
-      <ul><li></li></ul>
-      
-      <h3></h3>
-      <ul><li></li></ul>
-      
-
-      <h3></h3>
-      <ul><li></li></ul>
-      
+</div>
+    <p>	
 </p> 
+</Suspense>
   </div>
 )
 }

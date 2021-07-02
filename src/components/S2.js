@@ -1,10 +1,31 @@
-import React from 'react'
-//import {useTranslation} from "react-i18next"
-
+import React,{ useState, useEffect } from 'react'
+import {
+  Button,
+Select,
+TextField,
+MenuItem
+} from '@material-ui/core'
 
 const S2 = () => {
   // eslint-disable-next-line
-  //const [t, i18n] = useTranslation('common')
+  const [color, setColor] = useState('grey')
+  const [count, setCount] = useState(0)
+  const [dollars, setDollars] = useState('$$')
+  const [selected, setSelected] = useState(false)
+  const [text1, setText1] = useState('ekateksti')
+  const [text2, setText2] = useState('tokateksti')
+  useEffect(() => {
+    if(Number.isInteger(count)){
+      console.log('toimii')
+      let dol = ''
+      for(let i=0;i<count;i++){
+        dol = dol + '$'
+      }
+      console.log(dol)
+      setDollars(dol)
+    }
+  }, [count])
+
   return(
   <div style={{ 
     font: 'Verdana'
@@ -20,7 +41,7 @@ const S2 = () => {
       <li>Var - mutable = can changed, old type of variable</li>
       <br />
       React detects variable data types automatically.
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
         <b>const</b>
         <br />
         const test = 'Hello world!'
@@ -36,41 +57,77 @@ const S2 = () => {
         <br />
         testing = 'Bye bye moon!' // no errors, because let is mutable
         <br />
+        Text 1:<TextField
+              value={text1}
+              onChange={({ target }) => setText1(target.value)}
+            />
+            <br />
+            Text 2: <TextField
+              value={text2}
+              onChange={({ target }) => setText2(target.value)}
+            />
+            <br />
+        Count of dollars 
+      <Button style={{backgroundColor: color, color:"#C4DFE6",fontSize: "14px" }} type='submit' onClick={() => setCount(count-1)}>-</Button>
+    <Button style={{backgroundColor: color, color:"#C4DFE6",fontSize: "14px" }} type='submit' onClick={() => setCount(count+1)}>+</Button>
+          <br />
+<br /> Dollars: {dollars}
+<br />
+<br />
+
+Button color
+        <Select labelId="color" id="color" value={color} onChange={({ target }) => setColor(target.value)}>
+            <MenuItem value={'red'}>Red</MenuItem>
+            <MenuItem value={'grey'}>Grey</MenuItem>
+            <MenuItem value={'blue'}>Blue</MenuItem>
+            <MenuItem value={'green'}>Green</MenuItem>
+          </Select>
+          <br /><br />
+
+          <Button style={{backgroundColor: color, color:"#C4DFE6",fontSize: "14px" }} type='submit' onClick={() => setSelected(!selected)}>{selected ? 'Deactivate other button below' : 'Activate other button below'}</Button>
+          <br />
+          <br /><Button style={{backgroundColor: color, color:"#C4DFE6",fontSize: "14px" }} type='submit'
+            disabled={(!selected)} onClick={() => alert('You clicked me!!')} >Click me if you can!</Button>
+      
+    
+
          </div>
       </ul>
       <h3>For and while loops</h3>
       <ul>
         <li>For</li>
         </ul>
-        <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+        <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>for(let i=0;i=i&#43;1;i&lt;10)&#10100;
               <br />
-              console.log(i)
+              console.log(i) // prints "0123456789" in console
+            </p>
+              
               <br />
               &#10101;
+              
               <br />
-            // prints "0123456789" in console
-            </p>
+            
         </div>
         <ul>
         <li>While</li>
-        <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+        <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p><br />
             let i = 0<br />
               while(i&lt;10)&#10100;
               <br />
-              console.log(i)
+              console.log(i) // prints "0123456789" in console
               <br />
               i = i+1
               <br />
               &#10101;
               <br />
-            // prints "0123456789" in console
+            
             </p>
         </div>    
       </ul>
       <h3>Functions, arguments</h3>
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p><br />
             function printing(place='Pori', age=7)&#10100;
               <br />
@@ -83,7 +140,7 @@ const S2 = () => {
         </div> 
         <b>Function returns</b>
         <br />
-        <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+        <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p><br />
             Functions can use 'return' statement if we want to return something after processing in function.
             <br /><br />
@@ -101,7 +158,7 @@ const S2 = () => {
         <b>Arrow functions</b>
         <br />
         Arrow functions can be used since ES6 version. It simplifies functions.
-        <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+        <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p><br />
             const printing = (place, age) =&#62; 'I live in $&#10100;place&#10101; and I am $&#10100;age &#10101; years old'
             <br />
@@ -112,7 +169,7 @@ const S2 = () => {
 
       <h3>Objects</h3>
 
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>
             Object are declared like this:
               <br />
@@ -140,7 +197,7 @@ const S2 = () => {
 
         <h3>Arrays</h3>
 
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>
             Arrays are declared like this:
               <br />
@@ -210,7 +267,7 @@ const S2 = () => {
      
 
       <h3>Spread</h3>
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>
             Arrays are declared like this:
               <br />
@@ -233,7 +290,7 @@ const S2 = () => {
       
 
       <h3>Asynchronous</h3>
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>
             React (JavaScript) can be used asynchronously. If we want to wait for some actions to be completed before we do next step, we can use then or async/await:
             <br />
@@ -273,7 +330,7 @@ const S2 = () => {
       
       <h3>Classes</h3>
 
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>
             Classes can be used since ES2015.
             <br /><br />
@@ -328,7 +385,7 @@ const S2 = () => {
       
 
       <h3>Modules</h3>
-      <div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+      <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
             <p>
             With modules you can reuse same code in different places.
             <br /><br />

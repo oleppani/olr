@@ -1,8 +1,10 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
-import Left from './components/Left'
+/*import Left from './components/Left'
 import Right from './components/Right'
+
+*/
 import Footer from './components/Footer'
 import Home from './components/Home'
 import S1 from './components/S1'
@@ -18,17 +20,14 @@ import S10 from './components/S10'
 import S11 from './components/S11'
 import S12 from './components/S12'
 import PokemonTable from './components/PokemonTable'
-import React, { useState, useEffect, Suspense} from 'react'
+import React, { Suspense} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect,
-  Link
+  Route
 } from "react-router-dom"
 import {
   Container,
-  Button,
   AppBar,
 } from '@material-ui/core'
 function App() {
@@ -45,9 +44,7 @@ function App() {
     <Container>
       <Router>
         <AppBar position="static">
-            <Header />
-            <Left />
-            <Right />
+            <Header />  
             <Footer />
             <div align='bottom' position='fixed' style={{right:'0px', height:'10px', backgroundColor: "#C4DFE6", color:"#C4DFE6"}}></div>
         </AppBar>

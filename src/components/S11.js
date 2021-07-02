@@ -1,25 +1,18 @@
 import React from 'react'
-//import {useTranslation} from "react-i18next"
 
 
 const S11 = () => {
   // eslint-disable-next-line
-  //const [t, i18n] = useTranslation('common')
+  
   return(
   <div style={{ 
     font: 'Verdana'
   }}><br />
     <h2>React router</h2> 
-    <p>		1. Incorporating the Router
-		2. Router Properties
-			1. Nesting Routes
-		3. Using Redirects
-Routing Parameters
-<h3></h3>
-    </p>
-<div style={{backgroundColor: "#444444", color:"#C4DFE6",fontSize: "14px" }}>
+  
+<div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
 <h3>Creating React router</h3>
-<b>This App uses React router and moduls. App.js code is below. Sections of this "Osmo Learning React" are separate moduls. Modul S2 is "JavaScript for React", S3 is "Functional programming with JavaScript", S4 is "How React works" etc.
+<b>This App uses React router and modules. App.js code is below. Sections of this "Osmo Learning React" are separate moduls. Modul S2 is "JavaScript for React", S3 is "Functional programming with JavaScript", S4 is "How React works" etc.
   <br />
   Relative paths in Route path parameter defines URL's and moduls included inside Route are opened when URL is chosen. You can try React Router by clicking sections button in this App. </b>  
 
