@@ -6,7 +6,9 @@ const Home = () => {
   // eslint-disable-next-line
   //const [t, i18n] = useTranslation('common')
   return(
-    <header className="App-header">
+    
+<div>
+<br /><br /><br />
     <img src={logo} className="App-logo" alt="logo" />
 
     <b>Source codes for this "Osmo Learning React" App are stored in <a href="https://github.com/oleppani/olr" target='0'>https://github.com/oleppani/olr</a></b>
@@ -41,7 +43,7 @@ const Home = () => {
       </ul>
 
       <br /><br />
-        </header>
+        </div>
 )
 }
 export default Home

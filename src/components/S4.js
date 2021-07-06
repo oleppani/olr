@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React from 'react'
 import {
   Link
 } from "react-router-dom"
@@ -21,6 +21,7 @@ const S4 = () => {
           Pokemon table
           </Button>:
     <br /><br />
+    <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
 import React from 'react'
 <br />
 import ReactDOM from 'react-dom'
@@ -81,6 +82,8 @@ const PokemonTable = () =&#62; &#10100;
       &#10101;
       <br />
 export default PokemonTable
+
+</div>
 <br />     
 </p> 
   </div>

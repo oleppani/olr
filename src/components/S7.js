@@ -14,6 +14,7 @@ const S7 = () => {
     Effect and alert are used in previous examples in section "React state management"
 
     <br /><br />
+    <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
     useEffect(() =&#62; &#10100;
     <br />if(Number.isInteger(count))&#10100;
     <br />console.log('toimii')
@@ -47,6 +48,7 @@ setState
     <br />
     <br />
     <br />
+    </div>
 </p>
   </div>
 )
