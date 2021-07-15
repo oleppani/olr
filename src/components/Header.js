@@ -90,7 +90,7 @@ export default function Header() {
       icon: ''
     },
     {
-      label: 'React wit JSX',
+      label: 'React with JSX',
       href: "/rwj",
       icon: ''
     },
