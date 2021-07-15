@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+//import { render } from '@testing-library/react'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -27,20 +27,26 @@ const PokemonTable = () => {
         ))
       )
       }
-
-      
-    return(
+/***
+ * 
+ * return(
       ReactDOM.render(
         React.createElement(PokeTable, null, null),
           document.getElementById("root")
         )
     )
-/***
- * ReactDOM.render(
+ */
+      
+    /*return(
+      
+        React.createElement(PokeTable, null, null),
+          document.getElementById("root")
+        )
+    */
+ReactDOM.render(
       React.createElement(PokeTable, null, null),
         document.getElementById("root")
       )
-    )
- */
+
 }
 export default PokemonTable

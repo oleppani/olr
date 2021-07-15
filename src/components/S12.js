@@ -25,25 +25,27 @@ const S12 = () => {
     Command to install express server: npm install express
     <br />
 
-    Here is an example of server created with express. This server return static html (JavaScript) file index.html on every HTTP GET request.
+    Here is a server code for this App. This server return static html (JavaScript) file index.html on every HTTP GET request.
     <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
-    import express from "express"
     <br />
-const app = express()
-<br />const path = require("path")
-<br />
-app.use(express.static('public'))
-<br />
-app.get('*',(req,res)=&#62;&#10100;
-<br />res.sendFile(path.resolve(__dirname,'public','index.html'))
-<br />&#10101;)
+    
+    <br />const express=require('express')
+    <br />const app=express()
+    <br />const cors=require('cors')
+    <br />const path = require('path')
 
-<br />app.listen(&#10100; port: process.env.PORT || 3001&#10101;)
-.then((&#10100; url, subscriptionsUrl &#10101;) =&#62; &#10100;
-  console.log(`Server ready at $&#10100;url&#10101;`)
-  console.log(`Subscriptions ready at $&#10100;subscriptionsUrl&#10101;`)
-  &#10101;)
+    <br />const fetch = require('node-fetch')
 
+    <br />app.use(cors())
+    <br />app.use(express.static('public'))
+    <br />app.get('*',(req,res)=&#62;&#10100;
+    <br />res.sendFile(path.resolve(__dirname,'public','index.html'));
+    <br />&#10101;)
+
+    <br />
+app.listen(&#10100; port: process.env.PORT || 3001&#10101;)
+
+   
       </div>
 
       <br />

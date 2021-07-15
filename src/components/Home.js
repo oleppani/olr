@@ -10,10 +10,12 @@ const Home = () => {
 <div>
 <br /><br /><br />
     <img src={logo} className="App-logo" alt="logo" />
-
-    <b>Source codes for this "Osmo Learning React" App are stored in <a href="https://github.com/oleppani/olr" target='0'>https://github.com/oleppani/olr</a></b>
+    This App is divided in Front end and Back end. Back end run as server and every HTTP GET request is responded with build and minimized version of Front end file index.html (and script files).
     <br />
+    <b>The original source codes for this "Osmo Learning React" App's Front end are stored in <a href="https://github.com/oleppani/olr" target='0'>https://github.com/oleppani/olr</a></b>
     <br />
+    <b>Source codes for this "Osmo Learning React" App's Back end and build Front end are stored in <a href="https://github.com/oleppani/olrfull" target='0'>https://github.com/oleppani/olrfull</a></b>
+    <br /> <br />
     <h2>React</h2>
     <p>React is created by Jordan Walke in 2011 for Facebook's newsfeed requirements. React is an open source framework.</p>
 

@@ -10,23 +10,7 @@ const S10 = () => {
     font: 'Verdana'
   }}><br />
     <h2>React testing</h2> 
-    <p>		1. ESLint
-			1. ESLint Plug-Ins
-		2. Prettier
-			1. Configuring Prettier by Project
-			2. Prettier in VSCode
-		3. Typechecking for React Applications
-			1. PropTypes
-			2. Flow
-			3. TypeScript
-		4. Test-Driven Development
-			1. TDD and Learning
-		5. Incorporating Jest
-			1. Create React App and Testing
-		6. Testing React Components
-			1. Queries
-			2. Testing Events
-			3. Using Code Coverage
+    <p>	
 
       <br /><br />
       This App is configured to use Eslint for testing the code and problems are solved.

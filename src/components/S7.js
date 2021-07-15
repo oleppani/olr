@@ -11,10 +11,16 @@ const S7 = () => {
   }}><br />
     <h2>Enhancing components with hooks</h2>
     <p>	
-    Effect and alert are used in previous examples in section "React state management"
+    Effect, state and alert are used in previous examples in section "React state management"
 
     <br /><br />
     <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
+      <b>Effect and state:</b><br />
+      import React,&#10100; useState, useEffect &#10101; from 'react'
+      <br />...
+      <br />const [dollars, setDollars] = useState('$$')
+    
+      <br />...<br />
     useEffect(() =&#62; &#10100;
     <br />if(Number.isInteger(count))&#10100;
     <br />console.log('toimii')
@@ -28,26 +34,14 @@ const S7 = () => {
     <br />  &#10101;, &#91;count&#93;)
     <br /><br />
 
-    useLayoutEffect
+
+    <b>Alert:</b><br />
+
+    &lt;Button style=&#10100;&#10100;backgroundColor: color, color:"#C4DFE6",fontSize: "14px" &#10101;&#10101; type='submit'
+              disabled=&#10100;(!selected)&#10101; onClick=&#10100;() =&#62; alert('You clicked me!!')&#10101; &#62;Click me if you can!&lt;/Button&#62;
     <br /><br />
-    useReducer<br /><br />
-    <br />
 
-    <br />
-
-    <br />
-setState
-    <br />
-
-    <br />
-    <br /><br /><br /><br />
-    memo
-    <br />
-
-    shouldComponentUpdate and PureComponent
-    <br />
-    <br />
-    <br />
+    
     </div>
 </p>
   </div>
