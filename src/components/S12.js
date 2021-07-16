@@ -28,20 +28,37 @@ const S12 = () => {
     Here is a server code for this App. This server return static html (JavaScript) file index.html on every HTTP GET request.
     <div style={{backgroundColor:"#444444",color:"#C4DFE6",fontSize:"14px"}}>
     <br />
-    
+
     <br />const express=require('express')
     <br />const app=express()
     <br />const cors=require('cors')
     <br />const path = require('path')
-
-    <br />const fetch = require('node-fetch')
+    
+    <br />const request = require('request')
 
     <br />app.use(cors())
     <br />app.use(express.static('public'))
     <br />app.get('*',(req,res)=&#62;&#10100;
     <br />res.sendFile(path.resolve(__dirname,'public','index.html'));
     <br />&#10101;)
-
+    app.post('/api', async (req, res) =&#62; &#10100;
+    
+    console.log('nyt')
+    console.log(req.headers.url)
+    
+      await request(&#10100;
+        method: 'GET',
+        uri: req.headers.url,
+        headers: &#10100;&#10101;
+      &#10101;, function (error, response, body)&#10100;
+        if(!error &amp;&amp; response.statusCode === 200)&#10100;
+            console.log(body)
+          res.json(body);
+          &#10101;
+          &#10101;)
+    
+      
+          &#10101;)
     <br />
 app.listen(&#10100; port: process.env.PORT || 3001&#10101;)
 
