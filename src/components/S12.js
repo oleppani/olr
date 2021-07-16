@@ -41,26 +41,23 @@ const S12 = () => {
     <br />app.get('*',(req,res)=&#62;&#10100;
     <br />res.sendFile(path.resolve(__dirname,'public','index.html'));
     <br />&#10101;)
-    app.post('/api', async (req, res) =&#62; &#10100;
+    <br /><br />app.post('/api', async (req, res) =&#62; &#10100;
     
-    console.log('nyt')
-    console.log(req.headers.url)
-    
-      await request(&#10100;
-        method: 'GET',
-        uri: req.headers.url,
-        headers: &#10100;&#10101;
-      &#10101;, function (error, response, body)&#10100;
-        if(!error &amp;&amp; response.statusCode === 200)&#10100;
-            console.log(body)
-          res.json(body);
-          &#10101;
-          &#10101;)
+    <br />  await request(&#10100;
+      <br />    method: 'GET',
+      <br />     uri: req.headers.url,
+      <br />     headers: &#10100;&#10101;
+      <br />    &#10101;, function (error, response, body)&#10100;
+      <br />      if(!error &amp;&amp; response.statusCode === 200)&#10100;
+      <br />           console.log(body)
+      <br />          res.json(body);
+      <br />       &#10101;
+      <br />       &#10101;)
     
       
-          &#10101;)
+      <br />    &#10101;)
     <br />
-app.listen(&#10100; port: process.env.PORT || 3001&#10101;)
+    <br />app.listen(&#10100; port: process.env.PORT || 3001&#10101;)
 
    
       </div>
